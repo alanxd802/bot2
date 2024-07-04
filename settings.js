@@ -17,8 +17,8 @@ global.socialm = "GitHub: DGXeon"
 global.location = "India, Mizoram, Aizawl"
 
 global.ownernumber = '94759094698'  //creator number
-global.ownername = '⸸ ɪᴛᴢ ᴍᴇ ᴋʟᴡ ɢᴏᴅ ꜱᴀɪʀᴇɴ ☭' //owner name
-global.botname = 'ˣᵉᵒⁿ ᵇᵘᵍ ᵇᵒᵗ' //name of the bot
+global.ownername = '🎓ᴘᴏᴡᴇʀᴇᴅ ᵇʸ͟⇝ꪏ͢🎭[දා.ර්.ශ.නි.ක]🎓🗣️' //owner name
+global.botname = '⸸ ɪᴛᴢ ᴍᴇ ᴋʟᴡ ɢᴏᴅ ꜱᴀɪʀᴇɴ ☭' //name of the bot
 
 //sticker details
 global.packname = ''
