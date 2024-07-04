@@ -22,7 +22,7 @@ global.botname = 'ˣᵉᵒⁿ ᵇᵘᵍ ᵇᵒᵗ' //name of the bot
 
 //sticker details
 global.packname = ''
-global.author = '\n\n\n〔 卂ꪶꪁꪀ・ꪎꪫ 〕'\n\n\n'
+global.author = '\n\n\n〔 卂ꪶꪁꪀ・ꪎꪫ 〕\n\n\n'
 
 //console view/theme
 global.themeemoji = '☭'
