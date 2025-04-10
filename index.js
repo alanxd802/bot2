@@ -1,34 +1,29 @@
-//base by DGXeon (Xeon Bot Inc.)
-//re-upload? recode? copy code? give credit ya :)
-//YouTube: @DGXeon
-//Instagram: unicorn_xeon13
-//Telegram: t.me/xeonbotinc
-//GitHub: @DGXeon
-//WhatsApp: +916909137213
-//want more free bot scripts? subscribe to my youtube channel: https://youtube.com/@DGXeon
+const express = require('express');
+const app = express();
+__path = process.cwd()
+const bodyParser = require("body-parser");
+const PORT = process.env.PORT || 8000;
+let server = require('./qr'),
+    code = require('./pair');
+require('events').EventEmitter.defaultMaxListeners = 500;
+app.use('/server', server);
+app.use('/code', code);
+app.use('/pair',async (req, res, next) => {
+res.sendFile(__path + '/pair.html')
+})
+app.use('/qr',async (req, res, next) => {
+res.sendFile(__path + '/qr.html')
+})
+app.use('/',async (req, res, next) => {
+res.sendFile(__path + '/main.html')
+})
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.listen(PORT, () => {
+    console.log(`
+Don't Forgot To Give Star
 
-const {
-   spawn
-} = require('child_process')
-const path = require('path')
+ Server running on http://localhost:` + PORT)
+})
 
-function start() {
-   let args = [path.join(__dirname, 'main.js'), ...process.argv.slice(2)]
-   console.log([process.argv[0], ...args].join('\n'))
-   let p = spawn(process.argv[0], args, {
-         stdio: ['inherit', 'inherit', 'inherit', 'ipc']
-      })
-      .on('message', data => {
-         if (data == 'reset') {
-            console.log('Restarting Bot...')
-            p.kill()
-            start()
-            delete p
-         }
-      })
-      .on('exit', code => {
-         console.error('Exited with code:', code)
-         if (code == '.' || code == 1 || code == 0) start()
-      })
-}
-start()
+module.exports = app
